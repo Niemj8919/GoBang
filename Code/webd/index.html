@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>恶意域名检测 - Wings</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	
+
+	
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="/static/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/static/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="/static/css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="/static/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script src="/static/js/echarts.min.js"></script>
+	<link rel="apple-touch-icon" sizes="76x76" href="/static/images/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicon.png">
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div id="fh5co-logo"><a href="{{ url_for('index') }}"><img src="/static/images/logo.png" alt="Logo" class="img-responsive logo" style="float: left"></a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+						<li><a href="{{ url_for('index') }}" style="color: white"><strong>APT图谱</strong></a></li>
+						<li><a href="{{ url_for('dash') }}" style="color: white"><strong>系统概览</strong></a></li>
+						<li class="has-dropdown">
+							<button style="height: 40px; background-color: #1e2839;border-width: 0px"><a style="color: white"><strong>帮助</strong></a></button>
+							<ul class="dropdown">
+								<li><a href="{{ url_for('help') }}" style="color: black"><strong>如何使用</strong></a></li>
+								<li><a href="{{ url_for('introduction') }}" style="color: black"><strong>系统介绍</strong></a></li>
+								<li><a href="{{ url_for('about') }}" style="color: black"><strong>关于我们</strong></a></li>
+							</ul>
+						</li>
+						<li class="btn-cta" title="上传" style="color: white" ><a href="{{ url_for('upload') }}"><span><strong>上传样本</strong></span></a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(/static/images/img_bg_2.jpg);height: 110px">
+		<div class="overlay"></div>
+	</header>
+
+	<div class="fh5co-bg-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" style="height: 50px"></div>
+				<div class="col-md-12">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<div id="mynetwork" style="width: 100%; height: 500px "></div>
+                          
+					</div>
+				</div>				
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 text-center">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="icon-cloud2"></i>
+						</span>
+						<h3 style="color: black">软件脱壳</h3>
+						<p class="text-left" style="color: black">恶意APT通常不可以被直接反编译获得其源代码，往往会进行加壳处理。通过对恶意代码的脱壳处理，可以有效地暴露出其有效基因部分。</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 text-center">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="icon-leaf"></i>
+						</span>
+						<h3 style="color: black">深度学习基因归纳</h3>
+						<p class="text-left" style="color: black">正如一个DNA中包含许多基因一样，一个恶意APT也能够被划分为许多基因，其中大部分都是所有程序都共有的基础基因，而恶意APT所独有的具有攻击行为的基因则是由深度学习归纳给出。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="fh5co-bg-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" style="height: 50px"></div>
+				<div class="col-md-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<div id="mainchart2" style="width: 100%; height: 300px"></div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+                        <div id="mainchart3" style="width: 100%; height: 300px"></div>
+                        
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-started">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>为我们提供更多数据！</h2>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="col-md-6 col-md-offset-3 col-sm-6">
+						<button class="btn btn-default btn-block" onclick="start()">uploads</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2020 <a href="{{ url_for('about') }}" target="_blank" title="Wings">Wings</a> - <a>灵动之翼</a></small>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
+
+
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="/static/js/jquery-3.5.0.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/static/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/static/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/static/js/jquery.waypoints.min.js"></script>
+	<!-- Main -->
+<script src="/static/js/main.js"></script>
+        <script src="/static/js/code.js"></script>
+	<script>
+    	function start() {
+        	window.location = 'upload';
+    	}
+	</script>
+	</body>
+</html>
+

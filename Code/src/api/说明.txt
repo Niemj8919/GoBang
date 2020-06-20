@@ -1,0 +1,22 @@
+接口：getNewSample.py中的getNewSample(path, store)函数
+
+参数：
+path为str，文件绝对路径
+store为bool，True为保存进neo4j数据库，False为不保存
+
+返回:
+一个字典。
+如果运行出错，返回{'err': 错误信息}
+如果运行正确，且是apt，返回{'detect':'apt', 'classify': 分类的概率字典（下面解释）}
+如果运行正确，且不是apt，返回{'detect':'napt'}
+
+
+
+注：
+1.  分类的概率字典就是根据knn对该样本进行同源判定，格式为{'家族'：’概率'}
+
+*2. 由于之前已经把所有测试apt样本都存到数据库作为新样本了。如果需要演示上传并存进数据库，我从数据库删了
+/home/data_disk/iscom_data/unpacked_sample/apt_unpacked/Donot/6e444898cc7cbfc6aad429ce37d2b263
+这个Donot样本，可以用这个样本测试存进数据库，因为如果存重复的话可能会出问题。。
+*如果不存进数据库，只演示检测结果的话 任何样本都可以。
+
